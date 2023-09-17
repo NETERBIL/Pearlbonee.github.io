@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Details</title>
+    <style>
+        /* Reset default margin and padding for body */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Set a background color */
+        }
+
+        /* Center the content vertically and horizontally */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh; /* Make the container full height */
+            background-color: #fff; /* Set a background color for the container */
+            border-radius: 15px; /* Add a rounded border to the container */
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+        }
+
+        h2 {
+            font-size: 28px; /* Increase heading font size */
+            color: #333; /* Set heading color */
+            margin-bottom: 20px; /* Add spacing below the heading */
+        }
+
+        /* Style for submission details container */
+        #saved-details {
+            width: 100%;
+            max-width: 800px; /* Limit the maximum width */
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            background-color: #fff; /* Set a background color */
+        }
+
+        /* Style for each submission container */
+        .submission-container {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9; /* Set a background color for each container */
+            display: flex; /* Display items horizontally */
+            align-items: center; /* Vertically center items */
+            justify-content: space-between; /* Space between items */
+            transition: transform 0.2s ease-in-out; /* Add a subtle hover effect */
+        }
+
+        /* Style for strong elements within submission details */
+        .submission-container strong {
+            color: #333; /* Set text color */
+        }
+
+        /* Style for the uploaded image */
+        .submission-container img {
+            max-width: 100px; /* Limit the image width */
+            height: auto; /* Maintain aspect ratio */
+            margin-left: 20px; /* Add spacing to the left of the image */
+        }
+
+        /* Add hover effect to submission containers */
+        .submission-container:hover {
+            transform: scale(1.02); /* Scale up slightly on hover */
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); /* Add a shadow on hover */
+        }
+
+        /* Style for the clear button */
+        #clear-button {
+            background-color: #ff6347; /* Use a red color for the button */
+            color: #fff; /* Text color */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold; /* Make the text bold */
+            transition: background-color 0.3s ease; /* Add a smooth hover effect */
+            margin-top: 20px; /* Add spacing above the button */
+        }
+
+        #clear-button:hover {
+            background-color: #ff4500; /* Darker red on hover */
+        }
+
+    /* Style for the "Back" link */
+    #back-button {
+            background-color: #ff6347; /* Use a red color for the button */
+            color: #fff; /* Text color */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold; /* Make the text bold */
+            transition: background-color 0.3s ease; /* Add a smooth hover effect */
+            margin-top: 20px; /* Add spacing above the button */
+            text-decoration: none; /* Remove underline for the link */
+            display: inline-block; /* Display the link as an inline-block element */
+        }
+
+        #back-button:hover {
+            background-color: #ff4500; /* Darker red on hover */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Saved Submission Details</h2>
+        <div id="saved-details">
+            <!-- Saved submission details will be displayed here -->
+        </div>
+        <button id="clear-button">Clear All</button> <!-- Clear button -->
+        <a href="index.html" id="back-button">Back to Home</a> <!-- Back button -->
+    </div>
+
+
+    <script>
+        // Retrieve saved submission details from local storage
+        const savedSubmissions = JSON.parse(localStorage.getItem('savedSubmissions')) || [];
+        const savedDetailsContainer = document.getElementById('saved-details');
+        const clearButton = document.getElementById('clear-button'); // Get the clear button element
+
+        
+        // Function to display saved submission details
+        function displaySavedDetails() {
+            savedDetailsContainer.innerHTML = ''; // Clear existing details
+
+            savedSubmissions.forEach((submission, index) => {
+                const submissionContainer = document.createElement('div');
+                submissionContainer.classList.add('submission-container');
+
+                // Create a div to display the submission details
+                const submissionDetails = document.createElement('div');
+                submissionDetails.innerHTML = `
+                    <strong>User Name:</strong> ${submission.userName}<br>
+                    <strong>Family Name:</strong> ${submission.familyName}<br>
+                    <strong>Email:</strong> ${submission.email}<br>
+                    <strong>Phone Number:</strong> ${submission.phone}<br>
+                    <strong>Address:</strong> ${submission.address}<br>
+                    <strong>Note:</strong> ${submission.note}<br>
+                `;
+
+                // Create an image element if an image URL is provided
+                if (submission.imageUrl) {
+                    const imageElement = document.createElement('img');
+                    imageElement.src = submission.imageUrl;
+                    imageElement.alt = 'Uploaded Image';
+                    submissionDetails.appendChild(imageElement);
+                }
+
+                // Append the submission details to the container
+                submissionContainer.appendChild(submissionDetails);
+
+                // Append the container to the saved details container
+                savedDetailsContainer.appendChild(submissionContainer);
+            });
+        }
+
+        // Display saved submission details when the page loads
+        displaySavedDetails();
+
+        // Event listener for the clear button
+        clearButton.addEventListener('click', () => {
+            localStorage.removeItem('savedSubmissions'); // Remove saved submissions from local storage
+            savedSubmissions.length = 0; // Clear the savedSubmissions array
+            displaySavedDetails(); // Display an empty list
+        });
+
+
+        
+    </script>
+    
+</body>
+</html>

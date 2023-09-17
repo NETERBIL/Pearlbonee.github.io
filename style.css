@@ -1,0 +1,979 @@
+/* style.css */
+:root {
+  --white: #fff;
+  --light: #eeeded;
+  --orange: #0c0b0b;
+}
+
+body {
+  background-color: var(--orange);
+  font-family: system-ui;
+  overflow: auto;
+  margin: 0;
+}
+
+/* Add this to your existing CSS or in a separate style.css file */
+
+/* Style for the container */
+.container {
+  background-color: #f0f0f0; /* Light gray background */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Style for the user image */
+.user-image-container {
+  margin: 0 auto 20px;
+}
+
+#user-image {
+  width: 150px; /* Set the width to your desired size */
+  height: 150px; /* Set the height to your desired size */
+  border-radius: 50%; /* Make it a circular shape */
+  border: 4px solid #fff; /* Add a white border */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  object-fit: cover; /* Crop the image to fit the circular shape */
+}
+
+
+/* Style for the welcome text */
+.welcome-text {
+  margin-bottom: 20px;
+}
+
+.welcome-text h2 {
+  font-size: 28px;
+  color: var(--orange);
+}
+
+.welcome-text p {
+  font-size: 18px;
+  color: #333; /* Dark gray text color */
+}
+
+/* Style for the input and button container */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add a 3D shadow effect */
+  margin-top: 50px;
+  max-width: 300px; /* Limit the maximum width */
+  margin: 0 auto; /* Center the container horizontally */
+  transition: transform 0.3s; /* Add a hover effect */
+}
+
+.input-container:hover {
+  transform: scale(1.05); /* Slightly scale up on hover for a 3D effect */
+}
+
+#name-input,
+#password-input {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px; /* Adjust the width as needed */
+  font-size: 16px;
+  text-align: center;
+}
+
+#password-input {
+  width: 30%;
+  height: 30px;
+  font-size: 16px;
+  padding: 10px; /* Smaller font size for the password input */
+}
+
+
+/* Style for the your-name section */
+#your-name-section {
+  text-align: center;
+  padding: 20px;
+}
+
+#user-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--orange);
+}
+
+/* Additional styles can be added as needed */
+
+
+
+.sidebar ul li {
+  width: 120px;
+}
+
+.menu {
+  background-color: var(--white);
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  padding-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu .logo {
+  padding: 20px;
+  font-family: 'Lobster', cursive;
+  font-size: 26px;
+  text-align: center;
+  color: var(--orange);
+}
+
+.menu .logo span {
+  font-weight: bold;
+}
+
+.menu ul {
+  padding: 0;
+  margin-top: 20px;
+  list-style: none;
+  border-bottom: 1px solid var(--light);
+}
+
+.menu ul li {
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.3s;
+}
+
+.menu ul li i {
+  margin-right: 12px;
+}
+
+.menu ul li.active,
+.menu ul li:hover {
+  color: var(--orange);
+}
+
+.center {
+  padding: 20px;
+}
+
+/* Styles for the search bar */
+.search {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search .form {
+  display: flex;
+  align-items: center;
+  background-color: var(--light); /* Use your custom color variable */
+  border-radius: 25px; /* Increase border-radius for a rounder appearance */
+  padding: 10px; /* Add more padding for spacing */
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Expand to full width */
+  max-width: 400px; /* Limit the maximum width */
+}
+
+.search .form i {
+  margin-right: 10px;
+  color: var(--orange); /* Use your custom color variable */
+}
+
+.search .form input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  padding: 8px; /* Add padding for better input appearance */
+  font-size: 16px; /* Adjust font size as needed */
+  color: var(--dark-gray); /* Use your custom color variable */
+}
+
+.search .form button {
+  border: none;
+  background-color: var(--orange); /* Use your custom color variable */
+  color: var(--white);
+  padding: 8px 15px; /* Add padding for better button appearance */
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px; /* Adjust font size as needed */
+  transition: background-color 0.3s;
+}
+
+.search .form button:hover {
+  background-color: #ca0bf0; /* Slightly adjust the color on hover */
+}
+
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: var(--orange);
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+.item {
+  background-color: var(--white);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.item .img img {
+  width: 200px; /* Adjust the width as needed */
+  height: 200px; /* Adjust the height as needed */
+  object-fit: cover; /* Maintain aspect ratio and crop if necessary */
+  border: 2px solid var(--orange); /* Add a border with your custom color variable */
+  border-radius: 10px; /* Add border-radius for a rounded appearance */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+.item .content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.item .content .title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.item .content .des {
+  font-size: 14px;
+  margin-bottom: 10px;
+  opacity: 0.7;
+}
+
+.item .content .price {
+  font-weight: bold;
+  color: var(--orange);
+  margin-bottom: 10px;
+}
+
+.item .count {
+  width: 50px;
+  border-radius: 5px;
+  margin-right: 10px;
+  padding: 3px 5px;
+  border: 1px solid var(--light);
+  outline: none;
+}
+
+.item .content .add {
+  background-color: var(--orange);
+  color: var(--white);
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.item .content .remove {
+  background-color: var(--light);
+  color: var(--orange);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+}
+
+
+
+.sidebar ul {
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar ul li {
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--orange);
+}
+
+.sidebar ul li i {
+  margin-right: 5px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+/* ... (your existing code) ... */
+
+/* Styles for smaller screens */
+@media screen and (max-width: 768px) {
+  .menu ul {
+    padding: 0;
+    list-style: none;
+    border-bottom: 1px solid var(--light);
+  }
+
+  .menu ul li {
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.3s;
+  }
+
+  .menu ul li i {
+    margin-right: 12px;
+  }
+
+  .menu ul li.active,
+  .menu ul li:hover {
+    color: var(--orange);
+  }
+
+  /* Move the CONTACT section above other menu items */
+  .content-section#contact-section {
+    order: -1;
+    text-align: center;
+  }
+
+  /* Adjust the sidebar and content width for smaller screens */
+  .sidebar {
+    width: 100%;
+  }
+
+  .content {
+    width: 100%;
+  }
+}
+
+
+
+/* Add this CSS for the CONTACT section */
+#contact-section {
+  text-align: center;
+}
+
+#contact-form {
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #ca0bf075;
+}
+
+#contact-form label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: var(--orange);
+  text-align: left;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid var(--light);
+  border-radius: 5px;
+  font-size: 16px;
+  color: var(-- orange);
+}
+
+#contact-form button[type="submit"] {
+  background: linear-gradient(to bottom, #f5f0f7, #9309a875);
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#contact-form button[type="submit"]:hover {
+  background: linear-gradient(to bottom, #9309a8, #ca0bf0);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+#confirmation-message {
+  display: none;
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+#confirmation-message h3 {
+  font-size: 24px;
+  color: var(--orange);
+  margin-bottom: 10px;
+}
+
+#confirmation-details {
+  font-size: 18px;
+  text-align: left;
+  color: var(--orange);
+}
+
+
+
+
+
+/* Add these CSS styles to style.css */
+
+/* Styling for "Upload Image" and "Note" sections */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--orange);
+  text-align: left;
+}
+
+/* Style the file input to look like a button */
+.form-group input[type="file"] {
+  display: none;
+}
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.btn {
+  border: 2px solid gray;
+  color: gray;
+  background-color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.upload-btn-wrapper input[type="file"] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.upload-btn-wrapper .custom-file-upload {
+  color: #ca0bf075;
+  background-color: var(--white);
+  padding: 8px 20px;
+  border: 2px solid #ca0bf075;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Style the textarea for "Note" */
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid var(--light);
+  border-radius: 5px;
+  font-size: 16px;
+  color: var(--orange);
+  resize: none;
+}
+
+/* Improve clarity for "Note" label */
+.form-group label[for="note"] {
+  position: relative;
+  top: -5px;
+}
+
+/* Style the "Seçilen dosya yok" text for the file input */
+.custom-file-upload::before {
+  content: "Seçilen dosya yok";
+  display: block;
+  color: gray;
+  background-color: white;
+  padding: 8px 20px;
+  border: 2px solid gray;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Highlight the file name when a file is selected */
+.custom-file-upload input[type="file"]:focus + label::before {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+/* Add a subtle hover effect for the file input */
+.custom-file-upload:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+
+
+
+/* Add this CSS for the Order Cart section */
+#order-cart-section {
+  text-align: center;
+}
+
+.order-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.order-item {
+  background-color: var(--white);
+  border: 2px solid var(--orange);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.order-item p {
+  margin: 10px 0;
+  font-size: 18px;
+  color: var(--orange);
+}
+
+
+
+
+
+
+.item h3 {
+  color: var(--orange);
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.item .info {
+  font-size: 16px;
+  color: var(--orange);
+}
+
+/* Add spacing between information items */
+.item .info p {
+  margin: 5px 0;
+}
+
+/* Optional: Add more styles as needed */
+
+/* Add this CSS in your style.css file or in a <style> tag in your HTML file */
+
+/* Style for the uploaded image */
+.submission-container img {
+  max-width: 100px; /* Adjust the maximum width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Add spacing to the right of the image */
+  display: inline-block; /* Display the image inline with text */
+}
+
+
+
+
+
+/* Style the container for each submission */
+.submission-container {
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Style the container when hovered */
+.submission-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Hide the submission details by default */
+.submission-container .submission-details {
+  display: none;
+}
+
+/* Style the "Information" header */
+.submission-container strong {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #ca0bf075;
+}
+
+/* Style the header when clicked */
+.submission-container.active strong {
+  text-decoration: none;
+}
+
+/* Add animation for expanding/collapsing the submission details */
+.submission-container .submission-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+.submission-container.active .submission-details {
+  max-height: 500px; /* Adjust this value as needed */
+}
+
+
+
+
+
+/* Style for product names */
+.product-name {
+  font-size: 28px; /* Increase the font size for HD effect */
+  color: var(--orange); /* Use your custom color variable for the font color */
+  font-weight: bold; /* Make the font bold */
+  text-transform: uppercase; /* Convert text to uppercase */
+  letter-spacing: 1px; /* Add some letter spacing for better readability */
+  margin: 10px 0; /* Add margin for spacing */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
+}
+
+/* Style for product images */
+.img img {
+  max-width: 100%; /* Ensure images fit within their containers */
+  height: auto;
+  border-radius: 10px; /* Add a subtle border radius */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a deeper shadow for 3D effect */
+  transition: transform 0.2s ease-in-out; /* Add a subtle hover effect */
+}
+
+/* Hover effect for product images */
+.img img:hover {
+  transform: scale(1.03); /* Slightly zoom in on hover */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+/* Style for the product item container */
+.item {
+  background-color: #fff; /* White background */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a deeper shadow for 3D effect */
+  transition: transform 0.2s ease-in-out; /* Add a subtle hover effect */
+}
+
+/* Hover effect for the entire product item */
+.item:hover {
+  transform: translateY(-5px); /* Slightly lift on hover */
+  box-shadow: 0 12px 20px #ca0bf075; /* Enhance shadow on hover */
+}
+
+
+
+
+
+/* Style for the "YOUR NAME" section */
+#your-name-section {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba; /* Background color */
+  color: white; /* Text color */
+}
+
+#user-name {
+  font-size: 24px; /* Adjust font size as needed */
+  font-weight: bold;
+}
+
+#user-description {
+  font-size: 18px; /* Adjust font size as needed */
+  margin-top: 10px;
+}
+
+/* Add a subtle box shadow for depth */
+#your-name-section {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style for the Reklam Line */
+.reklam-line {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #fff, #a878bb88); /* Gradient background */
+  padding: 2px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  color: #000000;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: 'Your Font', sans-serif; /* Replace 'Your Font' with your chosen font */
+}
+
+/* Style for the scrolling text within the Reklam Line */
+.scrolling-text {
+  font-size: 24px;
+  font-weight: bold;
+  animation: scrollRight 30s linear infinite;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Optional: Add hover effect */
+.reklam-line:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+
+
+
+
+
+
+
+/* Style for the User Information section */
+.content-section#user-section {
+  background-color: #fff; /* White background */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+}
+
+.user-info h2 {
+  font-size: 24px;
+  color: var(--orange); /* Use your custom color variable */
+}
+
+/* Style for User Details */
+.user-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.user-detail {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.detail-label {
+  font-weight: bold;
+  color: var(--orange); /* Use your custom color variable */
+}
+
+.detail-value {
+  color: #333; /* Dark gray text color */
+}
+
+
+
+
+
+
+
+/* Style for the checkbox */
+input[type="checkbox"] {
+  display: none; /* Hide the default checkbox input */
+}
+
+/* Style for the custom checkbox label */
+.checkbox-label {
+  position: relative;
+  display: inline-block;
+  width: 24px; /* Adjust the size as needed */
+  height: 24px; /* Adjust the size as needed */
+  background-color: #f0f0f0; /* Light gray background */
+  border: 2px solid #ccc; /* Gray border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+}
+
+/* Style for the custom checkbox when checked */
+input[type="checkbox"]:checked + .checkbox-label {
+  background-color: #fdfdfd75; /* Blue background color when checked */
+  border: 2px solid #ca0bf075; /* Blue border color when checked */
+}
+
+/* Style for the checkmark icon inside the custom checkbox */
+.checkbox-label::after {
+  content: "\2713"; /* Checkmark symbol */
+  font-size: 18px; /* Adjust the size as needed */
+  color: #ca0bf075; /* White color for the checkmark */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.2s;
+}
+
+/* Style for the checkmark when the checkbox is checked */
+input[type="checkbox"]:checked + .checkbox-label::after {
+  opacity: 1; /* Show the checkmark when checked */
+}
+
+
+/* Style for the custom button */
+.custom-button {
+  background-color: #f9f6fa75; /* Change the button background color to blue */
+  color: black; /* Text color */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px; /* Adjust font size as needed */
+  transition: background-color 0.3s;
+}
+
+.custom-button:hover {
+  background-color: #ca0bf075; /* Change the button background color on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#user-section {
+  background: linear-gradient(to bottom, #f5f5f5, #e0e0e0); /* Gradient background */
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow effect */
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style for user details (no changes here) */
+
+/* Style for the user links section */
+.user-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-links a {
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+.user-links img {
+  width: 32px; /* Adjust the size of the icons */
+  height: 32px;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Add a subtle hover effect */
+}
+
+.user-links img:hover {
+  transform: scale(1.1); /* Scale up the icon on hover */
+}
+
+.detail-label {
+  font-weight: bold;
+  color: var(--orange);
+  flex: 1;
+}
+
+.detail-value {
+  flex: 2;
+  font-size: 18px;
+  color: #333;
+  text-align: left;
+}
+
+/* Style for the note section */
+#user-note-display {
+  font-size: 16px;
+  text-align: left;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Style for the user image container */
+.company-image-container {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style for the user image */
+#user-picture-display {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%; /* Ensure the image is fully circular */
+}

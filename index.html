@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ku">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container" id="start-page">
+    <div class="center">
+      <div class="user-image-container">
+        <img src="slider-img.png" alt="User Image" id="user-image">
+      </div>
+      <div class="welcome-text">
+        <h2>🌟Pearlbonee🌟</h2>
+        <p> خوشحالین بە پێشوازییەکی گرم لە هەموو میوانە بەڕێزەکانمان لە پەرلبۆنی. شانازییە بۆ ئێمە کە ئێوە لێرەن، و ئێمە ئەم بەرنامە ئۆنلاینەمان بە لەبەرچاوگرتنی کات بەسەربردن و ڕەزامەندی ئێوە کۆڕاوەتەوە </p>
+      </div>
+      <div class="input-container">
+        <input type="text" id="name-input" placeholder="لێرە ناوی خۆت بنووسە">
+        <input type="password" id="password-input" placeholder="کۆد" class="password-input">
+        <input type="checkbox" id="show-password">
+        <label for="show-password" class="checkbox-label"></label>
+        <button onclick="startWebsite()" class="custom-button">OK</button>
+
+      </div>
+    </div>
+  </div>
+  <div id="your-name-section">
+    <div id="user-name"></div>
+  </div>
+  
+
+  
+<div class="container" id="normal-page" style="display: none;">
+  <div class="sidebar">
+    <div class="menu">
+      <div class="logo"><i class="fas fa-bars"></i>Pearlbonee</div>
+      <ul>
+        <li id="user" onclick="handleItemClick('user')"><i class="far fa-user"></i> <span id="user-menu-name"></span></li>
+      
+        <li id="product" onclick="handleItemClick('product')"><i class="fas fa-shopping-cart"></i> Product</li>
+        <li id="order-cart" onclick="handleItemClick('order-cart')"><i class="fas fa-shopping-cart"></i> Order Cart</li>
+        <li id="contact" onclick="handleItemClick('contact')"><i class="fas fa-envelope"></i> Contact</li>
+      </ul>
+    </div>
+    
+    <div class="content">
+      <div class="center">
+        <div class="reklam-line">
+          <p class="scrolling-text">🤩تازە لە پیرلبۆنی🤝 ئێمە زۆر خۆشحاڵین کە ئێوەمان هەیە! وەک پێشوازییەکی گەرم، چێژ لە داشکاندنی تایبەتی 25% 💸لە یەکەم کڕینت وەربگرە. تەنها کۆدی Welcome Pearlbonee 🚚بەکاربهێنە لە کاتی کۆتایی هاتنی مامەڵەکەدا.🛒✨🎁</p>
+        </div>
+        
+        </div>
+        <h2 id="section-title">HOME</h2>
+        <div class="content-section" id="product-section" style="display: none;">
+          <div class="list">
+            <div class="item" data-key="1">
+              <div class="img">
+                <img src="t.png" alt="">
+              </div>
+              <div class="product-details">
+                <h2 class="product-name">Trendyol</h2>
+              </div>
+            </div>
+            <div class="item" data-key="2">
+              <div class="img">
+                <img src="e.png" alt="">
+              </div>
+              <div class="product-details">
+                <h2 class="product-name">Ebay</h2>
+                </div>
+            </div>
+            <div class="item" data-key="3">
+              <div class="img">
+                <img src="o.png" alt="">
+              </div>
+              <div class="product-details">
+                <h2 class="product-name">Online Shop</h2>
+                </div>
+            </div>
+            <div class="item" data-key="4">
+              <div class="img">
+                <img src="a.png" alt="">
+              </div>
+              <div class="product-details">
+                <h2 class="product-name">AliExpress</h2>
+              </div>
+            </div>
+            <div class="item" data-key="5">
+              <div class="img">
+                <img src="am.png" alt="">
+              </div>
+              <div class="product-details">
+                <h2 class="product-name">Amazon</h2>
+              </div>
+            </div>
+            <div class="item" data-key="6">
+              <div class="img">
+                <img src="z.png" alt="">
+              </div>
+              <div class="product-details">
+                <h2 class="product-name">Zara</h2>
+              </div>
+            </div>
+            <div class="item" data-key="7">
+              <div class="img">
+                <img src="ad.png" alt="">
+              </div>
+              <div class="product-details">
+                <h2 class="product-name">Adidas</h2>
+              </div>
+            </div>
+            <div class="item" data-key="8">
+              <div class="img">
+                <img src="tu.png" alt="">
+              </div>
+              <div class="product-details">
+                <h2 class="product-name">All World</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="content-section" id="user-section">
+      <div class="user-info">
+        <h2>زانیاری بەکارهێنەر</h2>
+        <div class="user-details">
+          <div class="user-detail">
+            <span class="detail-label">ناوی بەکارهێنەر:</span>
+            <span class="detail-value" id="user-name-display">[Your Name]</span>
+          </div>
+          <div class="user-detail">
+            <span class="detail-label">ژمارە نهێنیەکەت:</span>
+            <span class="detail-value" id="password-display">[Your Password]</span>
+          </div>
+          <div class="user-links">
+            <a href="https://www.instagram.com/Pearlbonee/" target="_blank"><img src="inst.png" alt="Instagram"></a>
+            <a href="https://www.instagram.com/net_erbil/" target="_blank"><img src="inst.png" alt="Instagram"></a>
+            <a href="https://www.neterbil.com/" target="_blank"><img src="web.png" alt="Website"></a>
+          </div>
+          <div class="user-detail">
+            <span class="detail-label">دەربارەی ئێمە</span>
+            <span class="detail-value" id="user-note-display">Welcome to Pearlbonee, by Neterbil Company! We are proud to be powered by Neterbil Company, bringing you a seamless online shopping experience. If you encounter any issues or have questions about our website, don't hesitate to reach out to us via WhatsApp at +90 533 869 6864.
+              🛒 Shop with Confidence
+              This website is proudly sponsored by Pearlbonee, your go-to destination for ordering anything in Europe and North Iraq. Contact us anytime at Pearlbonee, and we'll be more than happy to assist you. Reach us at +90533 869 6864.
+              🙏 Thank You for Choosing Us!
+              We sincerely thank you for choosing our website. We hope you enjoy your shopping experience, and our platform proves to be a valuable tool in getting the items you desire. Your satisfaction is our priority!🛍️ </span>
+          </div>
+          
+          <div class="user-detail">
+            <div class="company-image-container">
+              <img src="h.png" alt="Your Company Picture" id="user-picture-display">
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+
+     
+      
+
+
+
+      <div class="content-section" id="contact-section" style="display: none;">
+        <div class="center">
+          <!-- Contact form -->
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="user-name">User Name:</label>
+              <input type="text" id="user-name" name="user-name" placeholder="ناوت" required>
+            </div>
+            <div class="form-group">
+              <label for="family-name">Family Name:</label>
+              <input type="text" id="family-name" name="family-name" placeholder="ناوی باوک یان ناوی خێزان" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" placeholder="ئیمەیڵەکەت" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number:</label>
+              <input type="tel" id="phone" name="phone" placeholder="ژماره‌ی ته‌له‌فۆنه‌که‌ت" required>
+            </div>
+            <div class="form-group">
+              <label for="address">Address:</label>
+              <input type="text" id="address" name="address" placeholder="ناونیشانه‌كه‌ت">
+            </div>
+            <div class="form-group upload-btn-wrapper">
+              <label for="image" class="custom-file-upload">ئەو وێنەیە هەڵبژێرە کە دەتەوێت ئێمە بۆت داوا دەکەین</label>
+              <input type="file" id="image" name="image" accept="image/*">
+            </div>
+            <div class="form-group">
+              <label for="note">Note:</label>
+              <textarea id="note" name="note" placeholder="🛍️ بابەتەکانت هەڵبژێرە، قەبارەی خۆت هەڵبژێرە، ڕەنگەکەت هەڵبژێرە.پێویستت بە زانیاری زیاترە؟تەنها هەر شتێک بتەوێت بینووسە! 🛒📏🎨"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+      
+
+
+
+          
+        </div>
+      </div>
+      
+      
+      
+      <div class="content-section" id="order-cart-section" style="display: none;">
+        <div class="order-list">
+         
+         
+
+        </div>
+        
+        <!-- Container for the message -->
+        <div id="order-cart-message" style="display: none;">
+          <h3>سوپاس بۆ پەیوەندیکردنت بە ئێمەوە!زانیاریەکانت ئەوە پاشەکەوت دەکات و بەم زووانە داواکارییەکەت دەست دەکەوێت</h3>
+            </div>
+      </div>
+      
+      
+      
+      
+      
+    </div>
+    
+  </div>
+  
+  <style>
+    /* Add your CSS styles here for the language switcher */
+    .lang-menu {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+
+    .lang-menu .selected-lang {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    
+
+    .lang-menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .lang-menu ul li {
+        padding: 10px;
+        text-align: right;
+    }
+
+    .lang-menu ul li a {
+        text-decoration: none;
+        color: #333;
+    }
+
+    .lang-menu ul li:hover {
+        background-color: #f2f2f2;
+    }
+
+    .lang-menu ul li .flag-icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        background-size: cover;
+    }
+    
+</style>
+<!-- Language Switcher -->
+ <div class="lang-menu">
+    <ul>
+      <li>
+        <a href="#" onclick="changeLanguage('ku')" class="ku"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_Kurdistan.svg/1280px-Flag_of_Kurdistan.svg.png" class="flag-icon" alt="Kurdish Sorani Flag"></a>
+      </li>
+      <li>
+        <a href="#" onclick="changeLanguage('en')" class="en"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1920px-Flag_of_the_United_States.svg.png" class="flag-icon" alt="English Flag"></a>
+      </li>
+      <li>
+        <a href="#" onclick="changeLanguage('ar')" class="ar"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Flag_of_Iraq.svg/1920px-Flag_of_Iraq.svg.png" class="flag-icon" alt="Iraqi Flag"></a>
+      </li>
+      <li>
+        <a href="#" onclick="changeLanguage('tr')" class="tr"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/1280px-Flag_of_Turkey.svg.png" class="flag-icon" alt="Turkish Flag"></a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Your existing scripts... -->
+  <script src="script.js"></script>
+
+  <!-- JavaScript for language switching -->
+  <script>
+    // Define language-specific content
+    const languages = {
+      ku: {
+        welcomeText: 'به وێبسایت خوش ئێندی بێت!',
+        namePrompt: 'تکایە ناوت بنووسە:'
+      },
+      en: {
+        welcomeText: 'Welcome to the Website!',
+        namePrompt: 'Please enter your name:'
+      },
+      ar: {
+        welcomeText: 'مرحبًا بك في الموقع!',
+        namePrompt: 'الرجاء إدخال اسمك:'
+      },
+      tr: {
+        welcomeText: 'Web Sitesine Hoş Geldiniz!',
+        namePrompt: 'Lütfen adınızı girin:'
+      }
+    };
+
+    // Function to change the language of the entire page
+    function changeLanguage(lang) {
+      // Get the selected language content
+      const content = languages[lang];
+
+      // Update the entire page with new content
+      document.getElementById('welcome-text').textContent = content.welcomeText;
+      document.getElementById('name-prompt').textContent = content.namePrompt;
+      // Add more elements here that you want to translate
+    }
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
